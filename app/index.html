@@ -22,7 +22,7 @@
                 var lis = '';
                 
                 response.data.forEach(function(item) {
-                    lis += `<li>${item._id} | ${item.name} | ${item.status} | <a href="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8001/codes?value=${item._id}" target="_blank"><img width="100" height="100" src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8001/codes?value=${item._id}"></a></li>`
+                    lis += `<li>${item._id} | ${item.name} | ${item.status} | <a href="https://api.qrserver.com/v1/create-qr-code/?data=http://35.156.25.81/codes?value=${item._id}" target="_blank"><img width="100" height="100" src="https://api.qrserver.com/v1/create-qr-code/?data=http://35.156.25.81/codes?value=${item._id}"></a></li>`
                 })
                 
                 $("#code_list").html(lis)
