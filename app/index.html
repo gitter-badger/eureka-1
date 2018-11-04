@@ -15,7 +15,7 @@
     
     <script>
         function updateList() {
-            axios.get(`http://localhost:8080/codes?user_id=5bdec1508d717e27f8bac77e`)
+            axios.get(`35.156.25.81:8080/codes?user_id=5bdec1508d717e27f8bac77e`)
             .then(function (response) {
                 console.log(response)
 
@@ -39,7 +39,7 @@
         // handle click and add class
         $("#create_code").on("click", function(){
             var name = $("#name").val()
-            axios.post(`http://localhost:8080/codes`, {
+            axios.post(`35.156.25.81:8080/codes`, {
                     name: name,
                     user_id: '5bdda7f6bfa700c5a07f72ba'
                 })
