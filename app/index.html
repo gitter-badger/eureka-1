@@ -15,11 +15,11 @@
     
     <script>
         function updateList() {
-            axios.get(`35.156.25.81:8080/codes?user_id=5bdec1508d717e27f8bac77e`)
+            axios.get(`http://ec2-35-156-25-81.eu-central-1.compute.amazonaws.com:8080/codes?user_id=5bdec1508d717e27f8bac77e`)
             .then(function (response) {
                 console.log(response)
 
-                var lis = '';
+                var lis = '';35.156.25.81
                 
                 response.data.forEach(function(item) {
                     lis += `<li>${item._id} | ${item.name} | ${item.status} | <a href="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8001/codes?value=${item._id}" target="_blank"><img width="100" height="100" src="https://api.qrserver.com/v1/create-qr-code/?data=http://localhost:8001/codes?value=${item._id}"></li>`
@@ -39,7 +39,7 @@
         // handle click and add class
         $("#create_code").on("click", function(){
             var name = $("#name").val()
-            axios.post(`35.156.25.81:8080/codes`, {
+            axios.post(`http://ec2-35-156-25-81.eu-central-1.compute.amazonaws.com:8080/codes`, {
                     name: name,
                     user_id: '5bdda7f6bfa700c5a07f72ba'
                 })
